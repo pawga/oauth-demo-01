@@ -1,0 +1,18 @@
+server:
+  port: 9090
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://bpm-server:9080/realms/howtodoinjava-realm
+        registration:
+          keycloak:
+            authorization-grant-type: authorization_code
+            client-id: employee-management-api
+            client-secret: obj9kNq3GWRZxK0nqrpAdL6XLG5qnY2u
+            scope: openid
+
+
