@@ -4,6 +4,9 @@ server:
 spring:
   security:
     oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://bpm-server:9080/realms/howtodoinjava-realm/protocol/openid-connect/certs
       client:
         provider:
           keycloak:

@@ -21,6 +21,9 @@ class SecurityConfig {
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login()
+                .and()
+                .oauth2ResourceServer()
+                .jwt()
         return httpSecurity.build()
     }
 }
