@@ -1,12 +1,13 @@
 server:
-  ssl:
-    enabled: true
-    key-store: classpath:pawga777.p12
-    key-store-password: ZSE4zse4
-    key-store-type: pkcs12
-    key-alias: pawga777
-    key-password: ZSE4zse4
-  port: 8443
+#  ssl:
+#    enabled: true
+#    key-store: classpath:pawga777.p12
+#    key-store-password: ZSE4zse4
+#    key-store-type: pkcs12
+#    key-alias: pawga777
+#    key-password: ZSE4zse4
+#  port: 8443
+  port: 9090
 
 spring:
   security:

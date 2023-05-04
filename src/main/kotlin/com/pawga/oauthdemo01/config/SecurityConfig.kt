@@ -16,14 +16,17 @@ class SecurityConfig {
     @Bean
     @Throws(Exception::class)
     fun securityFilterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
-        httpSecurity.authorizeHttpRequests()
-                .requestMatchers("/public").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .oauth2Login()
-                .and()
-                .oauth2ResourceServer()
-                .jwt()
+        httpSecurity
+            .csrf().disable()
+            .cors().disable()
+            .authorizeHttpRequests()
+            .requestMatchers("/public").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .oauth2Login()
+            .and()
+            .oauth2ResourceServer()
+            .jwt()
         return httpSecurity.build()
     }
 }
